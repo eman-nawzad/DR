@@ -1,6 +1,6 @@
 streamlit
-xarray
-rioxarray
 geopandas
-folium
+rasterio
+matplotlib
+numpy
 
