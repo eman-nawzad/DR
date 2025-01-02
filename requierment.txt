@@ -1,6 +1,7 @@
-streamlit
-geopandas
-rasterio
-matplotlib
-numpy
+streamlit==1.16.0
+geopandas==0.12.0
+rasterio==1.3.4
+matplotlib==3.6.2
+numpy==1.23.3
+
 
