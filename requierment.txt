@@ -2,5 +2,3 @@ streamlit
 rasterio
 geopandas
 folium
-
-
