@@ -42,5 +42,5 @@ except Exception as e:
 if st.checkbox("Show on Map"):
     st.write("Map feature coming soon!")
 
-st.sidebar.info("Created by [Your GitHub Profile](https://github.com/your-profile)")
+st.sidebar.info("Created by [Your GitHub Profile](https://github.com/eman-nawzad)")
 
