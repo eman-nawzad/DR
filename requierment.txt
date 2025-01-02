@@ -1,4 +1,6 @@
 streamlit
-rasterio
+xarray
+rioxarray
 geopandas
 folium
+
