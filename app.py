@@ -11,7 +11,7 @@ st.set_page_config(page_title="Drought Monitoring", layout="wide")
 # Load GeoTIFF data
 def load_tif(file_path):
     with rasterio.open(file_path) as src:
-        data = src.read(1)
+        data = src.read(1)  # Read first band
         return data, src.transform
 
 # Display title
@@ -40,7 +40,8 @@ st.image(smap_data, caption="SMAP Map", use_column_width=True)
 
 # Additional analysis or plots can go here
 st.header("Drought Severity")
-# Example of drought severity analysis based on SPI thresholds
+
+# Define SPI drought thresholds
 thresholds = {
     'Extreme drought': -2.0,
     'Severe drought': -1.5,
@@ -48,6 +49,23 @@ thresholds = {
     'Mild drought': 0.0
 }
 st.write(f"Thresholds: {thresholds}")
+
+# Perform drought severity analysis based on SPI
+drought_severity = np.zeros_like(spi_data)
+drought_severity[spi_data < thresholds['Extreme drought']] = 1  # Extreme drought
+drought_severity[(spi_data >= thresholds['Extreme drought']) & (spi_data < thresholds['Severe drought'])] = 2  # Severe drought
+drought_severity[(spi_data >= thresholds['Severe drought']) & (spi_data < thresholds['Moderate drought'])] = 3  # Moderate drought
+drought_severity[(spi_data >= thresholds['Moderate drought']) & (spi_data < thresholds['Mild drought'])] = 4  # Mild drought
+
+# Plot the drought severity map
+st.write("Drought Severity Map")
+plt.imshow(drought_severity, cmap='YlOrRd', interpolation='nearest')
+plt.colorbar(label='Drought Severity')
+plt.title("Drought Severity Based on SPI")
+st.pyplot()
+
+# Optionally, you can save and display the drought severity as an image or more analysis
+
 
 
 
