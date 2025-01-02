@@ -46,3 +46,6 @@ Follow these steps to set up and run the application:
    cd repository-name
 pip install -r requierment.txt
 streamlit run app.py
+
+Save this script in your repository and run it. It will generate the `README.md` file in the same directory. Let me know if you need further assistance!
+
