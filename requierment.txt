@@ -1,1 +1,6 @@
+streamlit
+rasterio
+geopandas
+folium
+
 
