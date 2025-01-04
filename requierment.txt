@@ -1,7 +1,10 @@
 streamlit
+geopandas
 rasterio
+folium
 matplotlib
 numpy
+streamlit-folium
 
 
 
