@@ -20,5 +20,6 @@ pip install -r requierment.txt
 4. Run the application:
 streamlit run app.py
 
+pip install streamlit geopandas rasterio folium matplotlib streamlit-folium
 
 
