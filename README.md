@@ -1,36 +1,24 @@
-# Drought Monitoring Web Application
+# SPI Drought Monitoring
 
-This project monitors drought conditions using SPI, NDVI, and SMAP data for the Arbil region. The web application displays an interactive map with drought information and various analyses.
+This application visualizes the Standardized Precipitation Index (SPI) for drought monitoring.
 
-## Files and Folders
+## Repository Structure
+- `data/`: Contains the input data files.
+    - `SPI_2023.tif`: The GeoTIFF file for SPI visualization.
+- `app.py`: The Streamlit application script.
+- `README.md`: Documentation for the repository.
+- `requierment.txt`: Python dependencies.
 
-- `NDVI_Arbil.tif`: NDVI data for the Arbil region.
-- `SMAP_2023_GeoTIFF (1).tif`: SMAP data for the Arbil region.
-- `SPI_12_Month_2023.tif`: SPI data for the 12-month period of 2023.
-- `text.txt`: Additional textual data or logs.
-- `app.py`: Main Streamlit application.
-- `requirements.txt`: Python dependencies for the app.
-
-## Setup Instructions
+## How to Run the App
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/eman-nawzad/DR.git
-    cd drought-monitoring
-    ```
+git clone https://github.com/eman-nawzad/DR.git
+2. Navigate to the repository directory:
+cd DR
+3. Install the required Python libraries:
+pip install -r requierment.txt
+4. Run the application:
+streamlit run app.py
 
-2. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Run the Streamlit app:
-    ```bash
-    streamlit run app.py
-    ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
